@@ -1,0 +1,36 @@
+# MySQL 数据源配置
+datasource:
+  # MySQL 驱动类名
+  driver-class-name: com.mysql.cj.jdbc.Driver
+  # 数据库连接 URL，指定数据库为 community，禁用 SSL，设置时区为 UTC，并设置字符编码为 utf8
+  url: jdbc:mysql://localhost:3232/community?useSSL=false&serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
+  # 数据库用户名
+  username: root
+  # 数据库密码
+  password: 123456
+  # 数据源类型，使用 Hikari 连接池
+  type: com.zaxxer.hikari.HikariDataSource
+  # Hikari 连接池配置
+  hikari:
+    # 最大连接池大小，设置为 15 个连接
+    maximum-pool-size: 15
+    # 最小空闲连接数，设置为 5 个空闲连接
+    minimum-idle: 5
+    # 连接空闲超时时间，设置为 30 秒（30000 毫秒）
+    idle-timeout: 30000
+
+# MyBatis-Plus 配置
+mybatis-plus:
+  configuration:
+    # 开启驼峰命名法自动映射，将数据库中的下划线字段映射到 Java 驼峰命名的属性
+    map-underscore-to-camel-case: true
+    # 自动映射行为，设置为 full，允许 MyBatis 完全自动映射字段
+    auto-mapping-behavior: full
+    # 日志实现类，设置为 StdOutImpl，在控制台打印 SQL 日志
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 启用自动生成主键功能
+    use-generated-keys: true
+  # Mapper XML 文件的位置，表示会扫描 classpath 下的 mapper 文件夹及其子文件夹中的所有以 Mapper.xml 结尾的文件
+  mapper-locations: classpath*:mapper/**/*Mapper.xml
+  # 实体类包路径，将 top.yumuing.community.entity 下的类注册为 MyBatis 实体别名
+  type-aliases-package: top.yumuing.community.entity
