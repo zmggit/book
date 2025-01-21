@@ -4,4 +4,8 @@
     <select id="getAll" resultType="com.zmg.book.entity.User">
         select * from user;
     </select>
+
+    <select id="selectById" parameterType="long" resultType="com.zmg.book.entity.User">
+        SELECT id, name, age, email FROM user WHERE id = #{id}
+    </select>
 </mapper>

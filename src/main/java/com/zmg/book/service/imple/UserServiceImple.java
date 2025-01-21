@@ -17,4 +17,8 @@ public class UserServiceImple implements UserService {
     public List<User> getAll() {
         return userMapper.getAll();
     }
+
+    @Override
+    public User selectById(Long id) {return userMapper.selectById(id);
+    }
 }
