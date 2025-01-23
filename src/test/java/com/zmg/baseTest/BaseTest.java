@@ -102,9 +102,6 @@ class BaseTest {
         }
         // {Person: Bob}, {Person: Lily}, {Person: Tom}
         System.out.println(mapS.get(new Person("Bob",2))); // 2
-
-
-
     }
 }
 

@@ -1,4 +1,4 @@
-package com.zmg.book.service;
+package com.zmg.book.service.mysql;
 
 import com.zmg.book.entity.User;
 import org.junit.jupiter.api.Test;
@@ -10,6 +10,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.sql.DataSource;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.*;
 
 // 测试类
 @SpringBootTest
@@ -26,8 +27,8 @@ class UserServiceTest {
     @Test
     void getAll() { //用户列表
         List<User> us =  UserSer.getAll();
-       System.out.println(us);
-       //foreach 循环
+        System.out.println(us);
+        //foreach 循环
         for (User value : us) { //循环数据
             System.out.println(value);
         }

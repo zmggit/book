@@ -1,4 +1,4 @@
-package com.zmg.book.service;
+package com.zmg.book.service.mysql;
 
 import com.zmg.book.entity.User;
 
