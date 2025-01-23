@@ -1,13 +1,12 @@
 package com.zmg.book.mapper.oraclemapper;
 
-import com.zmg.book.entity.User;
+import com.zmg.book.entity.Student;
 import org.apache.ibatis.annotations.*;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
 @Mapper
 public interface UserOracleMapper {
-    List<User> findAll();
-    User selectById(Long id);
+    List<Student> getAll();
+    Student selectById(Long id);
 }

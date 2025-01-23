@@ -18,7 +18,7 @@ import javax.sql.DataSource;
 @MapperScan(basePackages = OracleDataSourceConfig.PACKAGE, sqlSessionFactoryRef = "oracleSqlSessionFactory")
 public class OracleDataSourceConfig {
 
-    static final String PACKAGE = "com.zmg.book.config.mapper.oraclemapper";
+    static final String PACKAGE = "com.zmg.book.mapper.oraclemapper";
 
     static final String MAPPER_LOCATION = "classpath*:mapper/oraclemapper/*.xml";
 

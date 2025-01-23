@@ -1,8 +1,7 @@
 package com.zmg.book.controller;
 
-
+import com.zmg.book.entity.Student;
 import com.zmg.book.entity.User;
-import com.zmg.book.service.mysql.UserMysqlService;
 import com.zmg.book.service.oracle.UserOracleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,13 +12,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/user")
-public class UserController {
+public class UserOracleController {
     @Autowired
-    private UserMysqlService userMysqlService;
-    @GetMapping("/list")
-    public List<User> list(){
+    private UserOracleService userOracleService;
+
+    @GetMapping("/oracleList")
+    public List<Student> list() {
         System.out.println("22222");
-        return this.userMysqlService.getAll();
+        return this.userOracleService.getAll();
     }
 }
-
