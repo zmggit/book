@@ -12,7 +12,17 @@ spring:
       username: SYS as sysdba
       password: oracle
       driver-class-name: oracle.jdbc.OracleDriver
-  devtools:
+    sybase:
+      jdbc-url: jdbc:sybase:Tds:172.16.43.1:5000/testdb
+      username: tester
+      password: 'guest1234'
+      driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
+#    sybase:
+#      jdbc-url: jdbc:sybase:Tds:172.16.45.3:5000
+#      username: test
+#      password: ' password'
+#      driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
+
     restart:
       enabled: true  #设置开启热部署
       exclude: "static/**,public/**" ##排除/static，/public
