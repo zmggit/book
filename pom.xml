@@ -89,10 +89,24 @@
         </dependency>
 
         <!-- MyBatis Starter -->
+<!--        <dependency>-->
+<!--            <groupId>org.mybatis.spring.boot</groupId>-->
+<!--            <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--            <version>3.0.3</version>-->
+<!--        </dependency>-->
+
+<!--        mybatis-plus-boot-starter-->
+
         <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis-spring</artifactId>
             <version>3.0.3</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-boot-starter</artifactId>
+            <version>3.5.5</version>
         </dependency>
 <!--        测试-->
         <dependency>
@@ -123,6 +137,18 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.10.2</version>
             <scope>compile</scope>
         </dependency>
 

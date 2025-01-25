@@ -13,41 +13,6 @@ import java.util.*;
 // 测试类
 @ExtendWith(MockitoExtension.class)
 class BaseTest {
-
-    @Test
-    void ConnMybase(){
-//        String driver = "com.sybase.jdbc4.jdbc.SybDriver"
-//        String url = "jdbc:sybase:Tds:172.16.45.3:5000";
-//        String username = "test";
-//        String password = " password";
-//        try {
-//        Class.forName(driver);
-//            DriverManager.getConnection(url, username, password);
-//        } catch (SQLException e) {
-//            e.printStackTrace();
-//            System.out.println();
-//        }
-
-        String driver = "com.mysql.cj.jdbc.Driver";
-        String url = "jdbc:mysql://127.0.0.1:3232/test";
-        String user = "root";
-        String password = "123456";
-           try{
-                 Class.forName(driver);
-                 Connection conn = DriverManager.getConnection(url, user, password);
-                 if(conn != null)
-                    {
-                        System.out.println("get Connection SUCCESS !");
-                    }
-           }
-           catch(Exception e)
-           {
-               e.printStackTrace();
-           }
-
-    }
-
-
     @Test
     void List() { //获取用户详情
         String[] names = {"ABC", "XYZ", "zoo"};

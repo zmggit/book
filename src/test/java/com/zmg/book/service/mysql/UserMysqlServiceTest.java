@@ -1,6 +1,6 @@
 package com.zmg.book.service.mysql;
 
-import com.zmg.book.entity.User;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -8,23 +8,17 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import javax.sql.DataSource;
-import java.util.List;
 
 // 测试类
+@Slf4j
 @SpringBootTest
-@ExtendWith(MockitoExtension.class)
-class UserOracleServiceTest {
-
-
+class UserMysqlServiceTest {
     @Autowired
-    DataSource datasource;
-
-    @Autowired
-    private UserMysqlService UserMysqlSer;
+    private UserMysqlService userMysqlSer;
 
     @Test
     void getAll() { //用户列表
-        var us =  UserMysqlSer.getAll();
+        var us =  userMysqlSer.getAll();
         System.out.println(us);
         //foreach 循环
 //        for (User value : us) { //循环数据
@@ -44,4 +38,12 @@ class UserOracleServiceTest {
 //        System.out.println(String.format("%s 名称",us.getName()));
 //        System.out.println(us.getId());
     }
+
+    @Test
+    public void findTotal(){
+
+        Long total = userMysqlSer.count();
+        System.out.println(total);
+    }
+
 }

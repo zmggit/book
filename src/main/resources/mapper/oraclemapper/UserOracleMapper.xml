@@ -8,4 +8,9 @@
     <select id="selectById" parameterType="long" resultType="com.zmg.book.entity.Student">
         SELECT * FROM STUDENT WHERE ID = #{id}
     </select>
+
+    <select id="selectList" resultType="com.zmg.book.entity.Student">
+        SELECT * FROM STUDENT
+    </select>
+
 </mapper>

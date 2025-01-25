@@ -1,12 +1,10 @@
 package com.zmg.book.entity;
 
-import lombok.AllArgsConstructor;
+import com.baomidou.mybatisplus.annotation.TableName;
 import lombok.Data;
-import lombok.NoArgsConstructor;
 
 @Data
-@NoArgsConstructor
-@AllArgsConstructor
+@TableName("user")
 public class User {
     private String id;
     private String name;
