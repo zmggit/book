@@ -8,10 +8,12 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
 
-// Mapper接口未被Spring管理
-@MapperScan("com.zmg.book.mapper")
 //主框架
 @SpringBootApplication
+
+@MapperScan(basePackages = "com.zmg.book.mapper.mysqlmapper", sqlSessionFactoryRef = "mysqlSqlSessionFactory")
+@MapperScan(basePackages = "com.zmg.book.mapper.oraclemapper", sqlSessionFactoryRef = "oracleSqlSessionFactory")
+
 public class BookApplication extends SpringBootServletInitializer {
 
     public static void main(String[] args) {

@@ -12,11 +12,12 @@ spring:
       username: SYS as sysdba
       password: oracle
       driver-class-name: oracle.jdbc.OracleDriver
-#    sybase:
-#      jdbc-url: jdbc:sybase:Tds:172.16.43.1:5000/testdb
-#      username: tester
-#      password: 'guest1234'
-#      driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
+      type: com.zaxxer.hikari.HikariDataSource  # 可选
+    sybase:
+      jdbc-url: jdbc:sybase:Tds:172.16.43.1:5000/testdb
+      username: tester
+      password: 'guest1234'
+      driver-class-name: com.sybase.jdbc4.jdbc.SybDriver
 #    sybase:
 #      jdbc-url: jdbc:sybase:Tds:172.16.45.3:5000
 #      username: test
@@ -35,16 +36,11 @@ spring:
 logging:
   level:
     org.apache.ibatis: DEBUG
-mybatis:
-  # 映射文件路径
-  mapper-locations:
-    classpath:mapper/*/*.xml
 
 mybatis-plus:
   mapper-locations:
     - classpath:mappers/mysqlmapper/*.xml
     - classpath:mappers/oraclemapper/*.xml
-    - classpath:mappers/mysqlmapper/*.xml
     - classpath:mappers/sybasemapper/*.xml
   type-aliases-package: com.zmg.book.entity
   configuration:

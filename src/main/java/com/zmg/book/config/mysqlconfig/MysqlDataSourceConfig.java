@@ -3,7 +3,6 @@ package com.zmg.book.config.mysqlconfig;
 
 import com.baomidou.mybatisplus.extension.spring.MybatisSqlSessionFactoryBean;
 import com.zaxxer.hikari.HikariDataSource;
-import com.zmg.book.config.oracleconfig.OracleDataSourceConfig;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.boot.context.properties.ConfigurationProperties;
